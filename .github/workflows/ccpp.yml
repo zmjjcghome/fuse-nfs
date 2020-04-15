@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: install app
+      run: sudo apt-get install libfuse-dev libnfs1 libtool m4 automake libnfs-dev
     - name: configure
       run: ./configure
     - name: make
